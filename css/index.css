@@ -1,14 +1,19 @@
+@font-face{
+    font-family:RobotoThin;
+    src:url("fonts/Roboto-Thin.ttf");
+}
+
 body{
     background-color:#1E1F1C;
     margin:0;
     padding:0;
 }
 
-
 nav{
-    margin:0;
-    padding:0;
-    height: 30px;
     background-color:#1E1F1C;
     -webkit-app-region:drag;
+}
+
+.title{
+    font-family:'RobotoThin';
 }
