@@ -16,6 +16,8 @@ nav{
 
 .title{
     font-family:'RobotoThin';
+    display: inline-block;
+    padding-top: .3125rem;
 }
 
 .antidrag{
@@ -29,4 +31,18 @@ nav{
 
 .closebtn:hover{
     background-color:red;
+}
+
+.frame{
+    width:100%; 
+    -webkit-app-region:drag;
+    display:block;
+}
+
+.navbar{
+    height:50px;
+}
+
+.navbar-brand{
+    font-size:36px;
 }
