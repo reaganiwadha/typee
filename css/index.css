@@ -17,3 +17,16 @@ nav{
 .title{
     font-family:'RobotoThin';
 }
+
+.antidrag{
+    -webkit-app-region:no-drag;
+}
+
+.closebtn{
+    margin:0;
+    padding:0;
+}
+
+.closebtn:hover{
+    background-color:red;
+}
