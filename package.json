@@ -1,0 +1,22 @@
+{
+  "name": "typee",
+  "version": "1.0.0",
+  "description": "electron-based typing game",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reaganiwadha/typee.git"
+  },
+  "author": "reaganiwadha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reaganiwadha/typee/issues"
+  },
+  "homepage": "https://github.com/reaganiwadha/typee#readme",
+  "dependencies": {
+    "electron": "^2.0.7"
+  }
+}
