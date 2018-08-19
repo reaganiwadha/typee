@@ -4,13 +4,13 @@
 }
 
 body{
-    background-color:#1E1F1C;
+    background-color:#000000;
     margin:0;
     padding:0;
+    padding-top:50px;
 }
 
 nav{
-    background-color:#1E1F1C;
     -webkit-app-region:drag;
 }
 
