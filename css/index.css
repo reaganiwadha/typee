@@ -46,3 +46,17 @@ nav{
 .navbar-brand{
     font-size:36px;
 }
+
+.rounded-btn{
+    background:transparent;
+    color:#FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    transition-duration:0.3s;
+    height:50%;
+}
+
+.rounded-btn:hover{
+    background:#fdd835;
+    border: 2px solid #fdd835;
+}
