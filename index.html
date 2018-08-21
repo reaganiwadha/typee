@@ -20,8 +20,7 @@
         <div class="row" style="color:white; text-align:center;">
             <div class="col">
                 <button class="rounded-btn">
-                        <img class="antidrag closebtn right" id="closebtn" onclick="kill()" src="svg/close.png">
-                    Tombol
+                    <img class="antidrag closebtn right" id="closebtn" onclick="kill()" src="svg/close.png"> Tombol
                 </button>
             </div>
             <div class="col">
@@ -34,11 +33,20 @@
         </div>
     </div>
 
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+
+    <script>
+        if (window.module) module = window.module;
+    </script>
 </body>
-
-<script src="js/bootstrap.min.js"></script>
-<script src="js/menu.js"></script>
-
 
 </html>
