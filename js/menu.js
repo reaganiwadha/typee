@@ -1,7 +1,7 @@
-const remote = require('electron').remote
+const remote = require('electron').remote;
 
 function kill(){
     remote.getCurrentWindow().close();
 }
 
-$(".closebtn").on("click", kill);
+$(".close.button").on("click", kill);
