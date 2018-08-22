@@ -4,9 +4,9 @@
   "description": "electron-based typing game",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "build-css": "sass scss/:css/",
-    "watch-css": "sass --watch scss/:css/"
+    "start": ["gulp", "electron ."],
+    "build": "gulp build",
+    "watch-scss": "gulp watch-scss"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
   },
   "devDependencies": {
     "sass": "~1.13.0",
-    "grunt": "~1.0.3"
+    "gulp": "~3.9.1",
+    "gulp-sass": "~4.0.1",
+    "gulp-sass-lint": "~1.4.0"
   }
 }
