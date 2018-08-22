@@ -4,7 +4,8 @@
   "description": "electron-based typing game",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build-css": "sass scss/:css/"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,7 @@
     "electron": "^2.0.7"
   },
   "devDependencies": {
-    "sass": "^1.13.0",
-    "grunt": "^1.0.3"
+    "sass": "~1.13.0",
+    "grunt": "~1.0.3"
   }
 }
