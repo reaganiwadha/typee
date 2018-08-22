@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build-css": "sass scss/:css/"
+    "build-css": "sass scss/:css/",
+    "watch-css": "sass --watch scss/:css/"
   },
   "repository": {
     "type": "git",
