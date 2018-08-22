@@ -1,7 +1,9 @@
 const {
     app,
-    BrowserWindow
+    BrowserWindow,
+    globalShortcut
 } = require('electron');
+
 
 let mainWindow
 
@@ -17,6 +19,11 @@ function createWindow() {
     mainWindow.on('closed', function () {
         mainWindow = null
     })
+
+    globalShortcut.register('f5', function() {
+		console.log('Re:Fresh')
+		mainWindow.reload()
+	})
 }
 
 app.on('ready', createWindow)
@@ -32,3 +39,4 @@ app.on('activate', function () {
         createWindow()
     }
 })
+
