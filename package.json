@@ -4,9 +4,10 @@
   "description": "electron-based typing game",
   "main": "main.js",
   "scripts": {
-    "start": ["gulp", "electron ."],
+    "prestart": "gulp build",
+    "start": "electron .",
     "build": "gulp build",
-    "watch-scss": "gulp watch"
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
