@@ -5,7 +5,7 @@ const {
 } = require('electron');
 
 
-let mainWindow
+let mainWindow = null;
 
 function createWindow() {
     mainWindow = new BrowserWindow({
@@ -15,28 +15,27 @@ function createWindow() {
         'minWidth':800,
         'minHeight':600
     });
-    mainWindow.loadFile('index.html')
+    mainWindow.loadFile('index.html');
     mainWindow.on('closed', function () {
-        mainWindow = null
+        mainWindow = null;
     })
 
     globalShortcut.register('f5', function() {
-		console.log('Re:Fresh')
-		mainWindow.reload()
+		console.log('Re:Fresh');
+		mainWindow.reload();
 	})
 }
 
-app.on('ready', createWindow)
+app.on('ready', createWindow);
 
 app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') {
         app.quit();
     }
-})
+});
 
 app.on('activate', function () {
     if (mainWindow === null) {
-        createWindow()
+        createWindow();
     }
-})
-
+});
