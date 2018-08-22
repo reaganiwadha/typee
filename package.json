@@ -6,7 +6,7 @@
   "scripts": {
     "start": ["gulp", "electron ."],
     "build": "gulp build",
-    "watch-scss": "gulp watch-scss"
+    "watch-scss": "gulp watch"
   },
   "repository": {
     "type": "git",

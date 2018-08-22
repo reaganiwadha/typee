@@ -17,6 +17,6 @@ gulp.task("lint-scss", function(){
 
 gulp.task("build", ["lint-scss", "build-css"])
 
-gulp.task("watch-scss", function(){
-    gulp.watch("scss/*.scss", ["build-css", "lint-scss"]);
+gulp.task("watch", function(){
+    gulp.watch("scss/*.scss", ["lint-scss", "build-css"]);
 });

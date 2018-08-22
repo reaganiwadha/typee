@@ -1,0 +1,11 @@
+rules:
+  no-trailing-whitespace: 2
+  trailing-semicolon: 2
+  space-before-brace: 0
+  indentation:
+    - 2
+    - size: 4
+  quotes:
+    - style: single
+  hex-length:
+    - style: long
