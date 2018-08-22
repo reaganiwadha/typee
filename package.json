@@ -16,9 +16,9 @@
   "author": "reaganiwadha",
   "contributors": {
     "person": {
-        "name": "Fransiskus Febryan Suryawan",
-        "email": "franfebryan@gmail.com",
-        "url": "https://vex8.github.io"
+      "name": "Fransiskus Febryan Suryawan",
+      "email": "franfebryan@gmail.com",
+      "url": "https://vex8.github.io"
     }
   },
   "license": "ISC",
@@ -30,9 +30,9 @@
     "electron": "^2.0.7"
   },
   "devDependencies": {
-    "sass": "~1.13.0",
-    "gulp": "~3.9.1",
+    "gulp": "^3.9.1",
     "gulp-sass": "~4.0.1",
-    "gulp-sass-lint": "~1.4.0"
+    "gulp-sass-lint": "~1.4.0",
+    "sass": "~1.13.0"
   }
 }
