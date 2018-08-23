@@ -11,13 +11,11 @@ $important: red;
 $nav-height: 3em;
 
 @keyframes pergiAtas{
-    //stupid solution but works
-
     0%{
-        margin-bottom:0;
+        transform:translateY(0vh);
     }
     100%{
-        margin-bottom:125vh;
+        transform:translateY(-120vh);
     }
 }
 
@@ -86,7 +84,9 @@ body{
 }
 
 .keatas{
-    animation: pergiAtas 0.75s ease-in-out;
+    animation: pergiAtas;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in-out;
 }
 
 .button{
