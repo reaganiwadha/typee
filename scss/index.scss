@@ -10,6 +10,17 @@ $important: red;
 
 $nav-height: 3em;
 
+@keyframes pergiAtas{
+    //stupid solution but works
+
+    0%{
+        margin-bottom:0;
+    }
+    100%{
+        margin-bottom:125vh;
+    }
+}
+
 body{
     background-color: $background;
     color: $foreground;
@@ -74,7 +85,12 @@ body{
     align-items: center;
 }
 
+.keatas{
+    animation: pergiAtas 0.75s ease-in-out;
+}
+
 .button{
+    cursor:pointer;
     background: transparent;
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
