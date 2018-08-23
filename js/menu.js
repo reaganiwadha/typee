@@ -13,7 +13,7 @@ function buttonime() {
     bc[0].classList.add('keatas');
     for (var i = 1; i < bc.length; i++) {
         $(bc[i]).attr("style","animation-delay: "+150*i+"ms;");
-        bc[i].classList.add('keatas');    
+        $(bc[i]).addClass('keatas');    
     }
 }
 
