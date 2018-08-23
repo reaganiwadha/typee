@@ -10,6 +10,15 @@ $important: red;
 
 $nav-height: 3em;
 
+@keyframes pergiAtas{
+    0%{
+        transform:translateY(0vh);
+    }
+    100%{
+        transform:translateY(-120vh);
+    }
+}
+
 body{
     background-color: $background;
     color: $foreground;
@@ -74,7 +83,15 @@ body{
     align-items: center;
 }
 
+.keatas{
+    animation: pergiAtas;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
 .button{
+    cursor:pointer;
     background: transparent;
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
