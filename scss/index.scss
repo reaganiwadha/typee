@@ -87,6 +87,7 @@ body{
     animation: pergiAtas;
     animation-duration: 0.75s;
     animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .button{
