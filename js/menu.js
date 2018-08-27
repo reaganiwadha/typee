@@ -12,7 +12,14 @@ function buttonime(link) {
         $(bc[i]).addClass('keatas');    
     }
     $(bc[bc.length-1]).on("animationend", function(){
-        window.location.href = link;
+        $('#buttonContainer').load('game/wbwm.html', function(){
+            console.log('loaded '+link);
+            $('#title').text('Back');
+            $('#title').addClass('button');
+            $('#title').addClass('back');
+            $('#title').addClass('nav');
+            
+        });
     })
 }
 
