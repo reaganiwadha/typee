@@ -11,7 +11,11 @@ $important: red;
 
 $nav-height: 3em;
 
+// variable initialization
+// note that variable can be initialized anywhere in css, this
+// here is for "global" variables
 :root{
+    // use #{--var} so that double-dash doesn't get interpreted by sass-linter
     #{--background}: #{$background};
     #{--foreground}: #{$foreground};
     #{--important}: #{$important};
