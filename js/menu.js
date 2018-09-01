@@ -6,14 +6,12 @@ function kill() {
 
 function buttonime(link) {
     var buttons = $("#buttonContainer").children();
-    console.log(buttons);
     buttons.each(function(i){
         $(this).addClass("keatas");
         $(this).css("animation-delay", 150*i+"ms");
     });
     buttons.last().on("animationend", function(){
         //TODO: add actual handler
-        console.log(this);
         console.log("Animation End.");
     });
 }
