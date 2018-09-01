@@ -6,9 +6,21 @@
 $background: #000000;
 $foreground: #FFFFFF;
 $theme: #FDD835;
+$theme-accent: darken($theme, 15%);
 $important: red;
 
 $nav-height: 3em;
+
+:root{
+    #{--background}: #{$background};
+    #{--foreground}: #{$foreground};
+    #{--important}: #{$important};
+
+    #{--theme}: #{$theme};
+    #{--theme-accent}: #{$theme-accent};
+
+    #{--nav-height}: #{$nav-height};
+}
 
 @keyframes pergiAtas{
     0%{
@@ -20,11 +32,11 @@ $nav-height: 3em;
 }
 
 body{
-    background-color: $background;
-    color: $foreground;
+    background-color: var(--background);
+    color: var(--foreground);
     margin: 0;
     padding: 0;
-    margin-top: $nav-height;
+    margin-top: var(--nav-height);
     overflow: hidden;
 }
 
@@ -54,7 +66,7 @@ body{
     top: 0;
     left: 0;
     display: flex;
-    background: $theme;
+    background: var(--theme);
     * {
         margin: 0;
     }
@@ -74,11 +86,11 @@ body{
 }
 
 .container{
-    $margin: 5em;
+    #{--margin}: 5em;
     display: flex;
     flex-flow: row;
-    margin: $margin;
-    height: calc(100vh - calc(#{$margin} * 2));
+    margin: var(--margin);
+    height: calc(100vh - calc(var(--margin) * 2));
     justify-content: space-between;
     align-items: center;
 }
@@ -91,7 +103,7 @@ body{
 }
 
 .button{
-    cursor:pointer;
+    cursor: pointer;
     background: transparent;
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
@@ -101,11 +113,11 @@ body{
         border-radius: .8em;
     }
     &:hover{
-        background: $theme;
-        border: 1px solid $theme;
+        background: var(--theme);
+        border: 1px solid var(--theme);
     }
     &:active{
-        background: darken($theme, 25%);
+        background: var(--theme-accent);
     }
     // Used only in the top navbar
     &.nav{
@@ -117,7 +129,7 @@ body{
     }
     &.close{
         &:hover{
-            background: $important;
+            background: var(--important);
         }
         &:active{
             background: darken($important, 25%);
