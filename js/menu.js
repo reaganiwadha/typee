@@ -5,15 +5,17 @@ function kill() {
 }
 
 function buttonime(link) {
-    var bc = document.getElementById("buttonContainer").children;
-    bc[0].classList.add('keatas');
-    for (var i = 1; i < bc.length; i++) {
-        $(bc[i]).attr("style","animation-delay: "+150*i+"ms;");
-        $(bc[i]).addClass('keatas');    
-    }
-    $(bc[bc.length-1]).on("animationend", function(){
-        window.location.href = link;
-    })
+    var buttons = $("#buttonContainer").children();
+    console.log(buttons);
+    buttons.each(function(i){
+        $(this).addClass("keatas");
+        $(this).css("animation-delay", 150*i+"ms");
+    });
+    buttons.last().on("animationend", function(){
+        //TODO: add actual handler
+        console.log(this);
+        console.log("Animation End.");
+    });
 }
 
 function startWbwm() {
