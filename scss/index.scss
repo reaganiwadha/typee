@@ -63,6 +63,18 @@ body{
     height: 100%;
 }
 
+.iconbtn{
+    margin:0.5em;
+}
+
+.bottomright {
+    position: absolute;
+    bottom: 0.5em;
+    right: 1em;
+    font-size: 18px;
+    padding:0;
+}
+
 .navbar.fixed-top{
     -webkit-app-region: drag;
     width: 100vw;
@@ -110,7 +122,7 @@ body{
     cursor: pointer;
     background: transparent;
     color: #FFFFFF;
-    border: 1px solid #FFFFFF;
+    border: 2px solid #FFFFFF;
     transition: background 0.2s, border 0.3s;
     padding: 1em;
     &.round{
