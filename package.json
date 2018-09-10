@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/reaganiwadha/typee#readme",
   "dependencies": {
-    "electron": "^2.0.8"
+    "electron": "^2.0.8",
+    "material-icons": "^0.2.3"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
