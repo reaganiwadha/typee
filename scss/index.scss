@@ -37,6 +37,10 @@ $nav-height: 3em;
     }
 }
 
+.antidrag{
+    -webkit-app-region: no-drag;
+}
+
 body{
     background-color: var(--background);
     color: var(--foreground);
@@ -44,30 +48,6 @@ body{
     margin-top: var(--nav-height);
     overflow: hidden;
     padding: 0;
-}
-
-.flexbox{
-    display: flex;
-    justify-content: space-between;
-    &.center{
-        align-items: center;
-    }
-    &.vertical{
-        flex-flow: column;
-    }
-    &.horizontal{
-        flex-flow: row;
-    }
-}
-
-.fill-parent{
-    height: 100%;
-    width: 100%;
-}
-
-.iconbtn{
-    margin: .5em;
-    font-size:32pt;
 }
 
 .bottomright {
@@ -78,49 +58,6 @@ body{
     right: 1em;
 }
 
-.navbar{
-    -webkit-app-region: drag;
-    background: var(--theme);
-    display: flex;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    * {
-        margin: 0;
-    }
-}
-
-.right{
-    align-self: flex-end;
-}
-
-.title{
-    font-family: 'RobotoThin';
-    padding-left: .5em;
-    color:$background;
-}
-
-.antidrag{
-    -webkit-app-region: no-drag;
-}
-
-.container{
-    #{--margin}: 5em;
-    align-items: center;
-    display: flex;
-    flex-flow: row;
-    height: calc(100vh - calc(var(--margin) * 2));
-    justify-content: space-between;
-    margin: var(--margin);
-}
-
-.keatas{
-    animation: pergiAtas;
-    animation-duration: .75s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-}
 
 .button{
     background: transparent;
@@ -157,4 +94,68 @@ body{
             background: darken($important, 25%);
         }
     }
+}
+
+.flexbox{
+    display: flex;
+    justify-content: space-between;
+    &.center{
+        align-items: center;
+    }
+    &.vertical{
+        flex-flow: column;
+    }
+    &.horizontal{
+        flex-flow: row;
+    }
+}
+
+.fill-parent{
+    height: 100%;
+    width: 100%;
+}
+
+.iconbtn{
+    margin: .5em;
+    font-size:32pt;
+}
+
+.navbar{
+    -webkit-app-region: drag;
+    background: var(--theme);
+    display: flex;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    * {
+        margin: 0;
+    }
+}
+
+.right{
+    align-self: flex-end;
+}
+
+.title{
+    font-family: 'RobotoThin';
+    padding-left: .5em;
+    color:$background;
+}
+
+.container{
+    #{--margin}: 5em;
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    height: calc(100vh - calc(var(--margin) * 2));
+    justify-content: space-between;
+    margin: var(--margin);
+}
+
+.keatas{
+    animation: pergiAtas;
+    animation-duration: .75s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
