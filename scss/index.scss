@@ -4,9 +4,9 @@
 }
 
 
-$background: #000;
-$foreground: #fff;
-$theme: #fdd835;
+$background: #fff;
+$foreground: #000;
+$theme: #ffa000;
 $theme-accent: darken($theme, 15%);
 $important: #f00;
 
@@ -67,6 +67,7 @@ body{
 
 .iconbtn{
     margin: .5em;
+    font-size:32pt;
 }
 
 .bottomright {
@@ -97,6 +98,7 @@ body{
 .title{
     font-family: 'RobotoThin';
     padding-left: .5em;
+    color:$background;
 }
 
 .antidrag{
@@ -122,17 +124,19 @@ body{
 
 .button{
     background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid $theme;
+    color: $theme;
     cursor: pointer;
     padding: 1em;
-    transition: background .2s, border .3s;
+    transition: background .5s, border .2s;
     &.round{
         border-radius: .8em;
     }
     &:hover{
         background: var(--theme);
         border: 1px solid var(--theme);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        color: $background;
     }
     &:active{
         background: var(--theme-accent);
