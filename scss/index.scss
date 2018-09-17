@@ -4,9 +4,9 @@
 }
 
 
-$background: #fff;
+$background: #2B3D52;
 $foreground: #000;
-$theme: #ffa000;
+$theme: #33485F;
 $theme-accent: darken($theme, 15%);
 $important: #f00;
 
@@ -56,6 +56,22 @@ body{
     padding: 0;
     position: absolute;
     right: 1em;
+}
+
+.modecard{
+    color: #e8e7fe;
+    background: linear-gradient(to bottom right,#A246FE,#185a9d);
+    cursor: pointer;
+    border-radius:0.3em;
+    transition: .2s;
+    &:hover{
+        padding-top: .3em;
+        padding-bottom: .3em;
+    }
+    &:active{
+        margin-left: 4.3em;
+        margin-right: 4.3em;
+    }
 }
 
 

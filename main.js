@@ -11,10 +11,12 @@ function createWindow() {
     mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
-        frame: false,
+        frame: true,
+        title: "Typee",
         'minWidth':800,
         'minHeight':600
     });
+    mainWindow.setMenu(null);
     mainWindow.loadFile('index.html');
     mainWindow.on('closed', function () {
         mainWindow = null;
