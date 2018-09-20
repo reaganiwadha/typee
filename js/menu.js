@@ -5,7 +5,7 @@ function kill() {
 }
 
 function buttonime(link) {
-    var buttons = $("#buttonContainer").children();
+    var buttons = $(".modecard");
     buttons.each(function(i){
         $(this).addClass("goZero");
         $(this).css("animation-delay", 300*i+"ms");
@@ -13,6 +13,7 @@ function buttonime(link) {
     buttons.last().on("animationend", function(){
         //TODO: add actual handler
         console.log("Animation End.");
+        mainWindow.setPosition(50,30);
     });
 }
 

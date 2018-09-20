@@ -13,7 +13,7 @@ function createWindow() {
     mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
-        frame: false,
+        frame: true,
         title: "Typee",
         'minWidth':800,
         'minHeight':600,
@@ -26,8 +26,6 @@ function createWindow() {
         mainWindow.setPosition(x,y);
       },5);
     }
-
-
 
     mainWindow.setMenu(null);
     mainWindow.loadFile('index.html');

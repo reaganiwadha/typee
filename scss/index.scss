@@ -64,14 +64,15 @@ body{
     border:none;
     color: #e8e7fe;
     cursor: pointer;
+    margin: 1em;
     transition: .2s;
     &:hover{
         padding-bottom: .3em;
         padding-top: .3em;
     }
     &:active{
-        margin-left: 4.3em;
-        margin-right: 4.3em;
+        margin-left: 2em;
+        margin-right: 2em;
     }
 }
 
@@ -160,15 +161,6 @@ body{
     padding-left: .5em;
 }
 
-.container{
-    #{--margin}: 5em;
-    align-items: center;
-    display: flex;
-    flex-flow: row;
-    height: calc(100vh - calc(var(--margin) * 2));
-    justify-content: space-between;
-    margin: var(--margin);
-}
 
 .goZero{
     animation: zeroo;
