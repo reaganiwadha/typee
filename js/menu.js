@@ -7,8 +7,8 @@ function kill() {
 function buttonime(link) {
     var buttons = $("#buttonContainer").children();
     buttons.each(function(i){
-        $(this).addClass("keatas");
-        $(this).css("animation-delay", 25*i+"ms");
+        $(this).addClass("goZero");
+        $(this).css("animation-delay", 300*i+"ms");
     });
     buttons.last().on("animationend", function(){
         //TODO: add actual handler

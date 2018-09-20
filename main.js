@@ -4,6 +4,8 @@ const {
     globalShortcut
 } = require('electron');
 
+let angryMode = true;
+let howAngry = 1000;
 
 let mainWindow = null;
 
@@ -16,6 +18,15 @@ function createWindow() {
         'minWidth':800,
         'minHeight':600
     });
+
+    if(angryMode){
+      setInterval(function(){
+        var x = Math.floor(Math.random() * howAngry);
+        var y = Math.floor(Math.random() * howAngry);
+        mainWindow.setPosition(x,y);
+      },5);
+    }
+
     mainWindow.setMenu(null);
     mainWindow.loadFile('index.html');
     mainWindow.on('closed', function () {
