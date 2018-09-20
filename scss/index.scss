@@ -44,8 +44,8 @@ $nav-height: 3em;
 body{
     background-color: var(--background);
     color: var(--foreground);
-    margin: 0;
     margin-top: var(--nav-height);
+    margin: 0;
     overflow: hidden;
     padding: 0;
 }
@@ -59,15 +59,15 @@ body{
 }
 
 .modecard{
-    color: #e8e7fe;
     background: linear-gradient(to bottom right,#A246FE,#185a9d);
-    cursor: pointer;
     border-radius:0.3em;
-    transition: .2s;
     border:none;
+    color: #e8e7fe;
+    cursor: pointer;
+    transition: .2s;
     &:hover{
-        padding-top: .3em;
         padding-bottom: .3em;
+        padding-top: .3em;
     }
     &:active{
         margin-left: 4.3em;
@@ -155,9 +155,9 @@ body{
 }
 
 .title{
+    color: $background;
     font-family: 'RobotoThin';
     padding-left: .5em;
-    color:$background;
 }
 
 .container{

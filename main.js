@@ -4,7 +4,7 @@ const {
     globalShortcut
 } = require('electron');
 
-let angryMode = true;
+let angryMode = false;
 let howAngry = 1000;
 
 let mainWindow = null;
@@ -13,10 +13,10 @@ function createWindow() {
     mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
-        frame: true,
+        frame: false,
         title: "Typee",
         'minWidth':800,
-        'minHeight':600
+        'minHeight':600,
     });
 
     if(angryMode){
@@ -27,6 +27,8 @@ function createWindow() {
       },5);
     }
 
+
+
     mainWindow.setMenu(null);
     mainWindow.loadFile('index.html');
     mainWindow.on('closed', function () {
@@ -34,9 +36,14 @@ function createWindow() {
     })
 
     globalShortcut.register('f5', function() {
-		console.log('Re:Fresh');
-		mainWindow.reload();
-	})
+  		console.log('Re:Fresh');
+  		mainWindow.reload();
+  	});
+
+    globalShortcut.register('f9', function() {
+      console.log('DevTools Opened!');
+      mainWindow.webContents.openDevTools();
+    })
 }
 
 app.on('ready', createWindow);
