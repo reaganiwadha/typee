@@ -41,8 +41,55 @@ $nav-height: 3em;
     -webkit-app-region: no-drag;
 }
 
+@keyframes intro{
+    0%{
+        background: linear-gradient(-90deg,#0099AD,#00B29B);
+    }
+    100%{
+        background: var(--background);
+    }
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.container{
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+}
+
+.splash{
+    animation-name: fadein;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
 body{
-    background-color: var(--background);
+    animation-name: intro;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    background: linear-gradient(-90deg,#0099AD,#00B29B);
     color: var(--foreground);
     margin-top: var(--nav-height);
     margin: 0;
