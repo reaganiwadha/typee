@@ -9,6 +9,11 @@ $foreground: #000;
 $theme: #33485F;
 $theme-accent: darken($theme, 15%);
 $important: #f00;
+$splashwait: 1s;
+$splashanim: 1s;
+$splashcome: 2s;
+
+//splashcome = splashwait+splashanim;
 
 $nav-height: 3em;
 
@@ -20,6 +25,11 @@ $nav-height: 3em;
     #{--background}: #{$background};
     #{--foreground}: #{$foreground};
     #{--important}: #{$important};
+
+    #{--splashcome}: #{$splashcome};
+
+    #{--splashanim}: #{$splashanim};
+    #{--splashwait}: #{$splashwait};
 
     #{--theme}: #{$theme};
     #{--theme-accent}: #{$theme-accent};
@@ -64,15 +74,15 @@ $nav-height: 3em;
     animation-name: fadein;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    animation-delay: 5s;
+    animation-delay: var(--splashcome);
 }
 
 .splash{
     animation-name: fadein;
     animation-direction: reverse;
     animation-fill-mode: forwards;
-    animation-duration: 2s;
-    animation-delay: 3s;
+    animation-duration: var(--splashanim);
+    animation-delay: var(--splashwait);
     text-align: center;
     width: 100px;
     height: 100px;
@@ -86,9 +96,9 @@ $nav-height: 3em;
 
 body{
     animation-name: intro;
-    animation-duration: 2s;
+    animation-duration: var(--splashanim);
     animation-fill-mode: forwards;
-    animation-delay: 3s;
+    animation-delay: var(--splashwait);
     background: linear-gradient(-90deg,#0099AD,#00B29B);
     color: var(--foreground);
     margin-top: var(--nav-height);
