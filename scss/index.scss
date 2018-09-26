@@ -4,11 +4,17 @@
 }
 
 
-$background: #fff;
+$background: #2B3D52;
 $foreground: #000;
-$theme: #ffa000;
+$theme: #33485F;
 $theme-accent: darken($theme, 15%);
 $important: #f00;
+$splashwait: 1s;
+$splashanim: 1s;
+$splashcome: 2s;
+$grad1 : linear-gradient(-90deg,#0099AD,#00B29B);
+
+//splashcome = splashwait+splashanim;
 
 $nav-height: 3em;
 
@@ -21,19 +27,27 @@ $nav-height: 3em;
     #{--foreground}: #{$foreground};
     #{--important}: #{$important};
 
+    #{--splashcome}: #{$splashcome};
+
+    #{--splashanim}: #{$splashanim};
+    #{--splashwait}: #{$splashwait};
+
     #{--theme}: #{$theme};
     #{--theme-accent}: #{$theme-accent};
 
     #{--nav-height}: #{$nav-height};
+    #{--nav-height}: #{$nav-height};
+    #{--grad1}: #{$grad1};
+
 }
 
-@keyframes pergiAtas{
+@keyframes zeroo{
     0%{
-        transform: translateY(0);
+        transform: scaleX(1) scaleY(1);
     }
 
     100%{
-        transform: translateY(-120vh);
+        transform: scaleX(0) scaleY(0);
     }
 }
 
@@ -41,11 +55,57 @@ $nav-height: 3em;
     -webkit-app-region: no-drag;
 }
 
+@keyframes intro{
+    0%{
+        background: linear-gradient(-90deg,#0099AD,#00B29B);
+    }
+    100%{
+        background: var(--background);
+    }
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.container{
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: var(--splashcome);
+}
+
+.splash{
+    animation-name: fadein;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+    animation-duration: var(--splashanim);
+    animation-delay: var(--splashwait);
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
 body{
-    background-color: var(--background);
+    animation-name: intro;
+    animation-duration: var(--splashanim);
+    animation-fill-mode: forwards;
+    animation-delay: var(--splashwait);
+    background: linear-gradient(-90deg,#0099AD,#00B29B);
     color: var(--foreground);
     margin: 0;
-    margin-top: var(--nav-height);
     overflow: hidden;
     padding: 0;
 }
@@ -58,11 +118,31 @@ body{
     right: 1em;
 }
 
+.modecard{
+    border-radius:0.3em;
+    border:none;
+    color: #e8e7fe;
+    cursor: pointer;
+    margin: 1em;
+    transition: .2s;
+    &:hover{
+        padding-bottom: .3em;
+        padding-top: .3em;
+    }
+    &:active{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    &.grad1{
+        background: var(--grad1);
+    }
+}
+
 
 .button{
     background: transparent;
-    border: 2px solid $theme;
-    color: $theme;
+    border: 2px solid var(--theme);
+    color: var(--theme);
     cursor: pointer;
     padding: 1em;
     transition: background .5s, border .2s;
@@ -73,7 +153,7 @@ body{
         background: var(--theme);
         border: 1px solid var(--theme);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        color: $background;
+        color: var(--background);
     }
     &:active{
         background: var(--theme-accent);
@@ -138,23 +218,14 @@ body{
 }
 
 .title{
+    color: var(--background);
     font-family: 'RobotoThin';
     padding-left: .5em;
-    color:$background;
 }
 
-.container{
-    #{--margin}: 5em;
-    align-items: center;
-    display: flex;
-    flex-flow: row;
-    height: calc(100vh - calc(var(--margin) * 2));
-    justify-content: space-between;
-    margin: var(--margin);
-}
 
-.keatas{
-    animation: pergiAtas;
+.goZero{
+    animation: zeroo;
     animation-duration: .75s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
