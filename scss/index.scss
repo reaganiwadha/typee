@@ -4,15 +4,15 @@
 }
 
 
-$background: #2B3D52;
+$background: #2b3d52;
 $foreground: #000;
-$theme: #33485F;
+$theme: #33485f;
 $theme-accent: darken($theme, 15%);
 $important: #f00;
 $splashwait: 1s;
 $splashanim: 1s;
 $splashcome: 2s;
-$grad1 : linear-gradient(-90deg,#0099AD,#00B29B);
+$grad1: linear-gradient(-90deg, #0099ad, #00b29b);
 
 //splashcome = splashwait+splashanim;
 
@@ -57,7 +57,7 @@ $nav-height: 3em;
 
 @keyframes intro{
     0%{
-        background: linear-gradient(-90deg,#0099AD,#00B29B);
+        background: linear-gradient(-90deg, #0099ad, #00b29b);
     }
     100%{
         background: var(--background);
@@ -121,7 +121,6 @@ body{
 .modecard{
     border-radius:0.3em;
     border:none;
-    color: #e8e7fe;
     cursor: pointer;
     margin: 1em;
     transition: .2s;
@@ -134,6 +133,7 @@ body{
         margin-right: 2em;
     }
     &.grad1{
+        color: #fff;
         background: var(--grad1);
     }
 }
